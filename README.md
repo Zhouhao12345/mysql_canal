@@ -1,5 +1,5 @@
-# docker_mysql_master
-Mysql Master Dockerization
+Please Follow Alibaba Office Help Doc:
+https://github.com/alibaba/canal/wiki/Docker-QuickStart
 
 How to setup canal server?
 
