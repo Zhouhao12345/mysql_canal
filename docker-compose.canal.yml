@@ -1,8 +1,7 @@
 canal:
   image: canal/canal-server:v1.1.3 
   container_name: canal_server
-  restart:
-  - always
+  restart: always
   ports:
   - 2222:2222
   - 11111:11111
@@ -11,10 +10,10 @@ canal:
   external_links:
   - mysql_canal_mysql_master_1:mysql
   environment:
+    canal.destinations: 'test'
     canal.instance.master.address: 'mysql:3306'
-    canal.instance.dbUsername: 'root'
-    canal.instance.dbPassword: 'Hello.123'
+    canal.instance.dbUsername: 'canal'
+    canal.instance.dbPassword: 'canal.123'
     canal.instance.connectionCharset: 'UTF-8'
     canal.instance.tsdb.enable: 'true'
     canal.instance.gtidon: 'false'
-    canal.instance.filter.regex: '.*\\..*'
