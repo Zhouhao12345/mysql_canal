@@ -1,5 +1,7 @@
 mysql_master:
   image: mysql:5.7
+  restart:
+  - always
   ports:
   - 3307:3306
   volumes:
